@@ -52,11 +52,10 @@ header .logo {
     list-style: none;
     padding: 0;
     margin: 0;
-    justify-content: space-between;
 }
 
 .containermain div.menu ul li {
-        width: 15%;
+        width: 16.8%;
         margin: 1.5%;
         background-color: #cdcdcd;
         min-height: 35px;
@@ -66,6 +65,8 @@ header .logo {
         border-radius: 4px;
         cursor: pointer;
         font-size: larger;
+        flex-wrap: wrap;
+        padding: 4px 0;
 }
 
 .containermain div.menu ul li:hover {
@@ -114,19 +115,14 @@ footer {
 }
 
 .cb-tool li{
-    width: 20% !important;
-    margin: 2% !important%;
+    margin: 2% !important;
     background-color: white !important;
 }
 
 .hp-tool .tool-text{
-    position: fixed;
     font-size: 11px;
-    margin-top: 45px;
 }
 
 .cb-tool .tool-text{
-    position: fixed;
-    font-size: 15px;
-    margin-top: 75px;
+    font-size: 14px;
 }
