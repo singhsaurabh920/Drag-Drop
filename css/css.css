@@ -66,7 +66,9 @@ header .logo {
         cursor: pointer;
         font-size: larger;
         flex-wrap: wrap;
-        padding: 4px 0;
+        padding: 4px 3px 0px 3px;
+        background-color: #ffffff;
+        color: black;
 }
 
 .containermain div.menu ul li:hover {
@@ -115,7 +117,6 @@ footer {
 }
 
 .cb-tool li{
-    margin: 2% !important;
     background-color: white !important;
 }
 
@@ -129,4 +130,15 @@ footer {
 
 .cb-tool .tool-text{
     font-size: 14px;
+}
+
+.mr-cb-tool{
+ margin-left: 10px !important;
+ margin-right: 10px !important;
+}
+
+.widget-content{
+    height: 180px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
