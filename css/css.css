@@ -119,6 +119,10 @@ footer {
     background-color: white !important;
 }
 
+.cb-tool li:hover *{
+    color:#000
+}
+
 .hp-tool .tool-text{
     font-size: 11px;
 }
