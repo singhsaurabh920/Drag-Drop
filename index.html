@@ -16,15 +16,17 @@
         }
 
         function drag(ev) {
-            ev.dataTransfer.setData("text", ev.target.id);
+            console.log(ev.target.getAttribute('image-name'))
+            ev.dataTransfer.setData("text", ev.target.getAttribute('image-name'));
         }
 
         function drop(ev) {
             ev.preventDefault();
             var id = ev.dataTransfer.getData("text");
-            var htmlStr = "<img class='widget-content' src='image/"+id+"'>";
+            var htmlStr = '<img draggable="true" ondragstart="drag(event)" image-name='+id+' class="widget-content" src="image/'+id+'">';
+            alert(htmlStr)
             ev.target.insertAdjacentHTML( 'beforeend', htmlStr );
-            document.getElementById(id).remove();
+            //document.getElementById(id).remove();
             //ev.target.appendChild(document.getElementById(id));
         }
     </script>
@@ -34,11 +36,11 @@
         <div class="menu">
             <h4>Basic Widgets</h4>
             <ul class="hp-tool">
-                <li draggable="true" ondragstart="drag(event)" image-name="" id="calendar-tool.jpg"><i class="fa fa-calendar" aria-hidden="true"></i><span class="tool-text">Calendar</span></li>
-                <li draggable="true" ondragstart="drag(event)" image-name="" id="weather-tool.jpg"><i class="fa fa-sun-o" aria-hidden="true"></i><span class="tool-text">Weather</span></li>
-                <li draggable="true" ondragstart="drag(event)" image-name="" id="clock-tool.jpg"><i class="fa fa-clock-o" aria-hidden="true"></i><span class="tool-text">Clock</span></li>
-                <li draggable="true" ondragstart="drag(event)" image-name="" id="map-tool.png"><i class="fa fa-map" aria-hidden="true"></i><span class="tool-text">Address</span></li>
-                <li draggable="true" ondragstart="drag(event)" image-name="" id="calculator-tool.png"><i class="fa fa-calculator" aria-hidden="true"></i><span class="tool-text">Calculator</span></li>
+                <li draggable="true" ondragstart="drag(event)" image-name="calendar-tool.jpg"><i class="fa fa-calendar" aria-hidden="true"></i><span class="tool-text">Calendar</span></li>
+                <li draggable="true" ondragstart="drag(event)" image-name="weather-tool.jpg"><i class="fa fa-sun-o" aria-hidden="true"></i><span class="tool-text">Weather</span></li>
+                <li draggable="true" ondragstart="drag(event)" image-name="clock-tool.jpg"><i class="fa fa-clock-o" aria-hidden="true"></i><span class="tool-text">Clock</span></li>
+                <li draggable="true" ondragstart="drag(event)" image-name="map-tool.png"><i class="fa fa-map" aria-hidden="true"></i><span class="tool-text">Address</span></li>
+                <li draggable="true" ondragstart="drag(event)" image-name="calculator-tool.png"><i class="fa fa-calculator" aria-hidden="true"></i><span class="tool-text">Calculator</span></li>
             </ul>
             <h4>Home Page</h4>
             <ul class="hp-tool">
